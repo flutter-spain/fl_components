@@ -7,6 +7,8 @@ class customInputField extends StatelessWidget {
   final String? helperText;
   final IconData? icon;
   final IconData? suffixIcon;
+  final TextInputType keyboardType;
+  final bool obscureText;
 
   const customInputField({
     Key? key, 
@@ -14,7 +16,8 @@ class customInputField extends StatelessWidget {
     this.hintText, 
     this.helperText, 
     this.icon, 
-    this.suffixIcon,
+    this.suffixIcon, 
+    this.keyboardType = TextInputType.text, required this.obscureText,
   }) : super(key: key);
 
   @override
@@ -26,11 +29,14 @@ class customInputField extends StatelessWidget {
       onChanged: ( value ) {
           print('value $value');
       },
+      keyboardType: keyboardType,
       validator: (value) {
         if (value == null) return 'El valor no puede ser nulo';
         return value.length < 3 ? 'El valor es muy corto' : null;
       },
       autovalidateMode: AutovalidateMode.onUserInteraction,
+
+      obscureText: obscureText,
       
       decoration: InputDecoration(
         hintText: hintText,

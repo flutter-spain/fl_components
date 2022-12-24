@@ -12,19 +12,53 @@ class InputsScreen extends StatelessWidget {
         title: const Text('Text Inputs'),
       ),
       body:  SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         child: Column(
           children: const [
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 20),
-                child: customInputField( 
+              
+              customInputField( 
                     labelText: 'Nombre',
                     hintText: 'Ingrese su nombre',
                     helperText: 'Solo letras',
                     icon: Icons.person,
                     suffixIcon: Icons.accessibility_new,
+                    obscureText: false,
                   ),
-              )
+          
+              SizedBox(height: 20),
+              
+
+              customInputField( 
+                    labelText: 'Apellidos',
+                    hintText: 'Ingrese sus apellidos',
+                    helperText: 'Solo letras',
+                    icon: Icons.person,
+                    suffixIcon: Icons.accessibility_new,
+                    obscureText: false,
+                  ),
+
+              SizedBox(height: 20),
+
+              customInputField( 
+                labelText: 'Email',
+                hintText: 'Ingrese su email',
+                helperText: 'Solo letras',
+                icon: Icons.email,
+                suffixIcon: Icons.email,
+                keyboardType: TextInputType.emailAddress,
+                obscureText: false,
+              ),
+
+              SizedBox(height: 20),
+              customInputField( 
+                labelText: 'Password',
+                hintText: 'Ingrese su password',
+                helperText: 'Solo letras',
+                icon: Icons.lock,
+                suffixIcon: Icons.lock_open,
+                keyboardType: TextInputType.visiblePassword,
+                obscureText: true,
+              ),
           ],
         ),
 
