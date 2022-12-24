@@ -12,7 +12,7 @@ class ListView1Screen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('ListView Tipo 1'),
       ),
-      body: ListView(
+      body: ListView (
         children:  [
           ...options.map(
             (e) => ListTile(
@@ -20,7 +20,7 @@ class ListView1Screen extends StatelessWidget {
               subtitle: const Text('Pulse para entrar'),
               trailing: const Icon(Icons.keyboard_arrow_right),
             )
-          ).toList()
+          ).toList(),
         ]
       )
     );
