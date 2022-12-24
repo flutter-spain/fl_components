@@ -1,7 +1,7 @@
 
+import 'package:flutter/material.dart';
 import 'package:fl_components/router/app_routers.dart';
 import 'package:fl_components/themes/app_theme_indigo.dart';
-import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 

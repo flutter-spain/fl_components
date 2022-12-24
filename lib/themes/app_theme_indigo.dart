@@ -12,6 +12,12 @@ class AppThemeIndigo {
           elevation: 0,
           color: primaryColor,
         ),
+
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            primary: primaryColor,
+          ),
+        ),
       );
 
 
