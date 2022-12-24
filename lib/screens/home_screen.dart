@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:fl_components/screens/screens.dart';
 
 class HomeScreen extends StatelessWidget {
    
@@ -18,6 +19,8 @@ class HomeScreen extends StatelessWidget {
           subtitle: const Text('Pulse para entrar'),
           trailing: const Icon(Icons.keyboard_arrow_right, color: Colors.indigo),
           onTap: () {
+            // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ListView1Screen()));
+            // Navigator.push(context, MaterialPageRoute(builder: (context) => ListView1Screen()));
             Navigator.pushNamed(context, 'listview1');
           },
         ),
