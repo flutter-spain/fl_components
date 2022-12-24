@@ -1,3 +1,4 @@
+import 'package:fl_components/themes/app_theme_indigo.dart';
 import 'package:flutter/material.dart';
 
 class AlertScreen extends StatelessWidget {
@@ -6,10 +7,19 @@ class AlertScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-         child: Text('AlertScreen'),
+         child: ElevatedButton(
+           child: const Text('Mostrar alerta'),
+           onPressed: () => print("Mostrar alerta"),
+         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.close),
+        onPressed: () {
+          Navigator.pop(context);
+        }
+        ),
     );
   }
 }

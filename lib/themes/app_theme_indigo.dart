@@ -18,6 +18,20 @@ class AppThemeIndigo {
             primary: primaryColor,
           ),
         ),
+
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: primaryColor,
+          elevation: 0
+        ),
+
+        elevatedButtonTheme: ElevatedButtonThemeData(
+           style: ElevatedButton.styleFrom(
+              primary: AppThemeIndigo.primaryColor,
+              shape: RoundedRectangleBorder(
+               borderRadius: BorderRadius.circular(20)
+              )
+           ),
+        ),
       );
 
 
