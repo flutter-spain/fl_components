@@ -18,15 +18,15 @@ class CardScreen extends StatelessWidget {
         children: const [
           CustomCardType1(),
           SizedBox(height: 20),
-          CustomCardType2(),
+          CustomCardType2(imageUrl: 'https://picsum.photos/2000?image=1', name: 'Demo'),
           SizedBox(height: 20),
-          CustomCardType2(),
+          CustomCardType2(imageUrl: 'https://picsum.photos/2000?image=2', name: 'Demo2'),
           SizedBox(height: 20),
-          CustomCardType2(),
+          CustomCardType2(imageUrl: 'https://picsum.photos/2000?image=3',),
           SizedBox(height: 20),
-          CustomCardType2(),
+          CustomCardType2(imageUrl: 'https://picsum.photos/2000?image=4',),
           SizedBox(height: 20),
-          CustomCardType2(),
+          CustomCardType2(imageUrl: 'https://picsum.photos/2000?image=5',),
         ]
       )
     );
