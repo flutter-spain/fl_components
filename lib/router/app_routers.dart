@@ -42,12 +42,26 @@ class AppRouter {
       name: 'Avatar',
       screen: const AvatarScreen(),
     ),
+    MenuOption(
+      route: 'animated',
+      icon: Icons.animation,
+      name: 'Animated',
+      screen: const AnimatedScreen(),
+    ),
+    MenuOption(
+      route: 'inputs',
+      icon: Icons.input,
+      name: 'Inputs',
+      screen: const InputsScreen(),
+    ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){
     Map<String, Widget Function(BuildContext)> appRoutes = {
        for (final option in menuOption) option.route: (BuildContext context) => option.screen
     };
+
+    // appRoutes.addAll({ 'home' : (BuildContext context) => const HomeScreen() });
 
     return appRoutes;
   }

@@ -32,6 +32,29 @@ class AppThemeIndigo {
               )
            ),
         ),
+      
+      inputDecorationTheme: const InputDecorationTheme(
+         floatingLabelStyle:  TextStyle(color: primaryColor),
+          labelStyle: TextStyle(color: primaryColor),
+
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: primaryColor),
+            borderRadius: BorderRadius.all(Radius.circular(10))
+          ),
+
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: primaryColor),
+            borderRadius: BorderRadius.all(Radius.circular(10))
+          ),
+
+          border: OutlineInputBorder(
+            borderSide: BorderSide(color: primaryColor),
+            borderRadius: BorderRadius.all(Radius.circular(10))
+          ),
+
+      ),
+
+      
       );
 
 
