@@ -60,6 +60,12 @@ class AppRouter {
       name: 'Sliders',
       screen: const SliderScreen(),
     ),
+    MenuOption(
+      route: 'infiniti',
+      icon: Icons.safety_check,
+      name: 'InfinitiScroll & PullToRefresh',
+      screen: const ListViewBuilderScreen(),
+    ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){
