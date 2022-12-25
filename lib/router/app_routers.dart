@@ -54,6 +54,12 @@ class AppRouter {
       name: 'Inputs',
       screen: const InputsScreen(),
     ),
+    MenuOption(
+      route: 'sliders',
+      icon: Icons.safety_check,
+      name: 'Sliders',
+      screen: const SliderScreen(),
+    ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){
