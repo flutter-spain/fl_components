@@ -30,30 +30,34 @@ class InputsScreen extends StatelessWidget {
           child: Column(
             children:  [
                 
-                const customInputField( 
+                customInputField( 
                       labelText: 'Nombre',
                       hintText: 'Ingrese su nombre',
                       helperText: 'Solo letras',
                       icon: Icons.person,
                       suffixIcon: Icons.accessibility_new,
                       obscureText: false,
+                      formProperty: 'first_name',
+                      formValues: formValues,
                     ),
             
                 SizedBox(height: 20),
                 
         
-                const customInputField( 
+                customInputField( 
                       labelText: 'Apellidos',
                       hintText: 'Ingrese sus apellidos',
                       helperText: 'Solo letras',
                       icon: Icons.person,
                       suffixIcon: Icons.accessibility_new,
                       obscureText: false,
+                      formProperty: 'last_name',
+                      formValues: formValues,
                     ),
         
                 SizedBox(height: 20),
         
-                const customInputField( 
+                customInputField( 
                   labelText: 'Email',
                   hintText: 'Ingrese su email',
                   helperText: 'Solo letras',
@@ -61,10 +65,13 @@ class InputsScreen extends StatelessWidget {
                   suffixIcon: Icons.email,
                   keyboardType: TextInputType.emailAddress,
                   obscureText: false,
+                  formProperty: 'email',
+                  formValues: formValues,
                 ),
         
                 SizedBox(height: 20),
-                const customInputField( 
+                
+                customInputField( 
                   labelText: 'Password',
                   hintText: 'Ingrese su password',
                   helperText: 'Solo letras',
@@ -72,9 +79,37 @@ class InputsScreen extends StatelessWidget {
                   suffixIcon: Icons.lock_open,
                   keyboardType: TextInputType.visiblePassword,
                   obscureText: true,
+                  formProperty: 'password',
+                  formValues: formValues,
                 ),
                 const SizedBox(height: 20),
-        
+
+
+                DropdownButtonFormField(
+                    icon: const Icon(Icons.arrow_downward),
+                    value: 'Admin',
+                    items: const [
+                      DropdownMenuItem(
+                        value: 'Admin',
+                        child: Text('Admin'),
+                      ),
+                      DropdownMenuItem(
+                        value: 'Editor',
+                        child: Text('Editor'),
+                      ),
+                      DropdownMenuItem(
+                        value: 'Invitado',
+                        child: Text('Invitado'),
+                      ),
+                    ],
+                    onChanged: (value) {
+                      print(value);
+                      formValues['role'] = value ?? 'Admin';
+                    },
+                    ),
+
+                const SizedBox(height: 20),
+
                 ElevatedButton(
                   onPressed: () {
                     FocusScope.of(context).requestFocus( FocusNode() );
